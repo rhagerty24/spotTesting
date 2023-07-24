@@ -1,0 +1,124 @@
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  background: #ffe374;
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 20px;
+  margin-top: -30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #323232;
+  font-size: 60px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.logo-image {
+  display: block;
+  width: 25%;
+  margin-left: auto; /* Add this line */
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  height: 100vh;
+  width: 300px;
+  max-width: 80vw;
+  background: #323232;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.menu-container.open {
+  transform: translateX(400px);
+}
+
+.menu-close-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #f7f7f7;
+  font-size: 60px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.menu-content {
+  color: #f7f7f7;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.menu-icon {
+  margin-right: 10px;
+  width: 30px;
+  color: white;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    background: #ffe374;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger-button {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  .menu-container {
+    height: 100vh;
+    max-width: 220px;
+  }
+
+  .menu-close-button {
+    font-size: 40px;
+  }
+
+  .menu-content {
+    font-size: 24px;
+    margin-top: 80px;
+  }
+}
+
+.container {
+  margin-top: 80px;
+}

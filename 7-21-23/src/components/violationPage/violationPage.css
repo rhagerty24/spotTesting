@@ -1,0 +1,150 @@
+.parking-ticket-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.parking-ticket {
+  width: 500px;
+  padding: 10px;
+  border: 0px solid #535353; /* change to 6px for the og look */
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #323232;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.parking-ticket-header {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.ticket-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.ticket-row {
+  display: flex;
+  padding: 2px;
+  gap: 10px;
+}
+
+.ticket-entry {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+.ticket-entry p {
+  margin: 0px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.write-ticket-button {
+  width: 250px;
+  border-width: 0px;
+  border-radius: 10px;
+  color: #323232;
+  background-color: #ffe374;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.write-ticket-button.darkened {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .parking-ticket {
+    width: 70%;
+    max-width: 400px;
+  }
+
+  .ticket-details {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Change to two columns for mobile */
+  }
+
+  .ticket-row {
+    flex-direction: row; /* Change back to row layout */
+    align-items: flex-start; /* Align items to the start */
+    flex-wrap: wrap; /* Allow items to wrap to new line */
+  }
+
+  .button-wrapper {
+    margin-top: 10px;
+  }
+
+  .write-ticket-button {
+    width: 40%;
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+.write-ticket-button.darkened {
+  opacity: 0.7;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@media print {
+  .header {
+    display: none; /* Hide the header during printing */
+  }
+
+  .button-wrapper {
+    display: none; /* Hide the button during printing */
+  }
+
+  .parking-ticket-wrapper {
+    margin-top: 0; /* Remove margin for printing */
+  }
+
+  .parking-ticket {
+    border: none; /* Remove border for printing */
+    box-shadow: none; /* Remove box shadow for printing */
+  }
+}
